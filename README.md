@@ -19,9 +19,31 @@ Berikut tahapan preprocessing yang dilakukan:
 
 ## 🧠 **MODELS**
 ### **1. VGG-16**
+![Architecture VGG-16](UAP/assets/Architecture%20VGG-16.png)
+VGG-16 merupakan arsitektur jaringan syaraf konvolusional (CNN). VGG16 memiliki 16 lapisan yang terdiri dari lapisan konvolusi dan lapisan fully connected. VGG16 menggunakan filter berukuran kecil (3x3) dan max pooling untuk mengurangi dimensi data secara bertahap.
+**Architecture adjustments**: 
+- Global Average Pooling setelah convolutional layers.
+- Dense layers: 512 → 128 → 5 dengan aktivasi ReLU, diikuti oleh softmax layer.
+- Dropout layers 0,5 untuk regularisasi.
+- Early Stopping patience of 5 epochs.
+**Hasil Pelatihan**:
+- 
 
+### **2. ResNet50**
+![Architecture ResNet50](UAP/assets/Architecture%20ResNet50.png)
+ResNet50 adalah arsitektur CNN yang diperkenalkan oleh Microsoft Research dan merupakan bagian dari keluarga Residual Networks. ResNet50 memiliki 50 lapisan dan menggunakan arsitektur residual yang mengimplementasikan shortcut connections.
+**Architecture adjustments:**:
+- Global Average Pooling setelah convolutional layers.
+- Dense layers: 512 → 128 → 5 dengan aktivasi ReLU, diikuti oleh softmax layer.
+- Dropout layers 0,5 untuk regularisasi.
+- Early Stopping patience of 5 epochs.
 
 ## 📊 **EVALUASI MODEL**
+### **VGG-16**
+#### **Hasil Grafik Pelatihan**
+
+
+
 ## 🌐 **DEPLOYMENT WEB**
 ## **AUTHOR**
 [Valencia Sefiana Putri]
