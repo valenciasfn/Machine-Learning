@@ -9,6 +9,7 @@ Dalam projek ini, data yang digunakan dari platform Mendeley Data ([Soybean Seed
 
 ## ⚙ **PREPROCESSING**
 Tahap preprocessing dilakukan untuk memperbaiki kualitas data serta mencegah hasil yang kurang optimal untuk meningkatkan kualitas dataset agar sesuai dengan model yang akan digunakan.
+
 Berikut tahapan preprocessing yang dilakukan:
 1. **Reshape**: dengan mengubah dimensi gambar menjadi ukuran yang diharapkan oleh model (224 x 224 piksel).
 2. **Rescale**: dengan mengubah rentang nilai piksel dari 0 hingga 255 menjadi nilai 0 hingga 1.
@@ -21,11 +22,13 @@ Berikut tahapan preprocessing yang dilakukan:
 ### **1. VGG-16**
 ![Architecture VGG-16](UAP/assets/Architecture%20VGG-16.png)
 VGG-16 merupakan arsitektur jaringan syaraf konvolusional (CNN). VGG16 memiliki 16 lapisan yang terdiri dari lapisan konvolusi dan lapisan fully connected. VGG16 menggunakan filter berukuran kecil (3x3) dan max pooling untuk mengurangi dimensi data secara bertahap.
+
 **Architecture adjustments**: 
 - Global Average Pooling setelah convolutional layers.
 - Dense layers: 512 → 128 → 5 dengan aktivasi ReLU, diikuti oleh softmax layer.
 - Dropout layers 0,5 untuk regularisasi.
 - Early Stopping patience of 5 epochs.
+
 **Hasil Pelatihan**:
 - Akurasi pelatihan: **82.44%** (epoch-15)
 - Akurasi validasi: **83.08%**
@@ -34,11 +37,13 @@ VGG-16 merupakan arsitektur jaringan syaraf konvolusional (CNN). VGG16 memiliki 
 ### **2. ResNet50**
 ![Architecture ResNet50](UAP/assets/Architecture%20ResNet50.png)
 ResNet50 adalah arsitektur CNN yang diperkenalkan oleh Microsoft Research dan merupakan bagian dari keluarga Residual Networks. ResNet50 memiliki 50 lapisan dan menggunakan arsitektur residual yang mengimplementasikan shortcut connections.
+
 **Architecture adjustments:**:
 - Global Average Pooling setelah convolutional layers.
 - Dense layers: 512 → 128 → 5 dengan aktivasi ReLU, diikuti oleh softmax layer.
 - Dropout layers 0,5 untuk regularisasi.
 - Early Stopping patience of 5 epochs.
+
 **Hasil Pelatihan**:
 - Akurasi pelatihan: **89.28%** (epoch-24)
 - Akurasi validasi: **86.93%**
