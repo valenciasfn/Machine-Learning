@@ -4,7 +4,7 @@
 Tujuan dari proyek ini adalah untuk mengembangkan sistem yang dapat mempermudah dan mempercepat identifikasi jenis kualitas benih kedelai untuk meningkatkan efisiensi dan kualitas pemrosesan benih kedelai secara keseluruhan. Klasifikasi secara manual sering kali menghadapi tantangan dalam menyortir benih kedelai secara akurat dan cepat, terutama di berbagai kategori seperti kedelai utuh, berbintik, belum matang, rusak, dan rusak kulit. Tantangan-tantangan ini dapat mengurangi efisiensi dan kualitas yang tidak konsisten jika dilakukan secara manual. Untuk mengatasi hal ini, teknologi pemrosesan gambar dan pembelajaran mendalam memberikan solusi dengan memungkinkan klasifikasi dan penyortiran biji kedelai secara otomatis. Teknologi ini tidak hanya meningkatkan efisiensi pemrosesan, tetapi juga memastikan standar kualitas produk dan mendukung skalabilitas dalam praktik pertanian.
 
 ## 📂 **DATASET**
-Dalam projek ini, data yang digunakan dari platform Mendeley Data [Soybean Seeds Dataset](https://data.mendeley.com/datasets/v6vzvfszj6/6). Dataset ini terdiri dari lima jenis biji kedelai, yaitu utuh, berbintik, belum matang, pecah, dan rusak kulitnya, dengan masing-masing kategori memiliki lebih dari 1000 citra biji kedelai. Total keseluruhan dataset pada penelitian ini berjumlah 5513 citra. Semua citra berukuran sama, yakni 277 x 277 pixel.
+Dalam projek ini, data yang digunakan dari platform Mendeley Data ([Soybean Seeds Dataset](https://data.mendeley.com/datasets/v6vzvfszj6/6)). Dataset ini terdiri dari lima jenis biji kedelai, yaitu utuh, berbintik, belum matang, pecah, dan rusak kulitnya, dengan masing-masing kategori memiliki lebih dari 1000 citra biji kedelai. Total keseluruhan dataset pada penelitian ini berjumlah 5513 citra. Semua citra berukuran sama, yakni 277 x 277 pixel.
 ![Citra Soybean Seeds](UAP/assets/Citra%20Soybean%20Seeds.png)
 
 ## ⚙ **PREPROCESSING**
@@ -27,7 +27,9 @@ VGG-16 merupakan arsitektur jaringan syaraf konvolusional (CNN). VGG16 memiliki 
 - Dropout layers 0,5 untuk regularisasi.
 - Early Stopping patience of 5 epochs.
 **Hasil Pelatihan**:
-- 
+- Akurasi pelatihan: **82.44%** (epoch-15)
+- Akurasi validasi: **83.08%**
+- Hasil Model:
 
 ### **2. ResNet50**
 ![Architecture ResNet50](UAP/assets/Architecture%20ResNet50.png)
@@ -37,14 +39,34 @@ ResNet50 adalah arsitektur CNN yang diperkenalkan oleh Microsoft Research dan me
 - Dense layers: 512 → 128 → 5 dengan aktivasi ReLU, diikuti oleh softmax layer.
 - Dropout layers 0,5 untuk regularisasi.
 - Early Stopping patience of 5 epochs.
+**Hasil Pelatihan**:
+- Akurasi pelatihan: **89.28%** (epoch-24)
+- Akurasi validasi: **86.93%**
+- Hasil Model:
 
 ## 📊 **EVALUASI MODEL**
 ### **VGG-16**
 #### **Hasil Grafik Pelatihan**
+![Grafik VGG-16](UAP/assets/Grafik%20VGG-16.png)
+#### **Hasil Classification Report**
+![Classification Report VGG-16](UAP/assets/CR%20VGG-16.png)
+#### **Hasil Confussion Matrix**
+![Confussion Matrix VGG-16](UAP/assets/CM%20VGG-16.png)
 
+### **ResNet50**
+#### **Hasil Grafik Pelatihan**
+![Grafik ResNet50](UAP/assets/Grafik%20ResNet50.png)
+#### **Hasil Classification Report**
+![Classification Report ResNet50](UAP/assets/CR%20ResNet50.png)
+#### **Hasil Confussion Matrix**
+![Confussion Matrix ResNet50](UAP/assets/CM%20ResNet50.png)
 
+## 🌐 **STREAMLIT**
+_framework_ Python yang digunakan untuk dengan cepat membangun dan berbagi aplikasi web yang menarik.
+### **Web UI**
 
-## 🌐 **DEPLOYMENT WEB**
+### **Result UI**
+
 ## **AUTHOR**
 [Valencia Sefiana Putri]
 
