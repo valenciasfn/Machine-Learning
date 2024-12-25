@@ -5,4 +5,4 @@ Tujuan dari proyek ini adalah untuk mengembangkan sistem yang dapat mempermudah 
 
 # DATASET
 Dalam projek ini, data yang digunakan berasal dari Jiangsu University of Science and Technology, Nanjing Agricultural University, yang merupakan dataset yang dikumpulkan dari platform Mendeley Data. Dataset ini terdiri dari lima jenis biji kedelai, yaitu utuh, berbintik, belum matang, pecah, dan rusak kulitnya, dengan masing-masing kategori memiliki lebih dari 1000 citra biji kedelai. Total keseluruhan dataset pada penelitian ini berjumlah 5513 citra. Semua citra berukuran sama, yakni 277 x 277 pixel.
-![Logo Proyek](UAP/assets/Citra Soybean Seeds.png)
+![Logo Proyek](./assets/Citra%20Soybean%20Seeds.png)
