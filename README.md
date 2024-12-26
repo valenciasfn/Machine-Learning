@@ -32,7 +32,7 @@ VGG-16 merupakan arsitektur jaringan syaraf konvolusional (CNN). VGG16 memiliki 
 **Hasil Pelatihan**:
 - Akurasi pelatihan: **82.44%** (epoch-15)
 - Akurasi validasi: **83.08%**
-- Hasil Model:
+- Hasil Model: [Model VGG-16](https://drive.google.com/file/d/1SfpihQXAZtq8YJuF5p7RSpqGDWIHIJAS/view?usp=sharing)
 
 ### **2. ResNet50**
 ![Architecture ResNet50](UAP/assets/Architecture%20ResNet50.png)
@@ -47,7 +47,7 @@ ResNet50 adalah arsitektur CNN yang diperkenalkan oleh Microsoft Research dan me
 **Hasil Pelatihan**:
 - Akurasi pelatihan: **89.28%** (epoch-24)
 - Akurasi validasi: **86.93%**
-- Hasil Model:
+- Hasil Model: [Model ResNet50](https://drive.google.com/file/d/1nheRUCtvYBtWhM5SEousA97VVv1j1zmP/view?usp=sharing)
 
 ## 📊 **EVALUASI MODEL**
 ### **VGG-16**
@@ -69,8 +69,47 @@ ResNet50 adalah arsitektur CNN yang diperkenalkan oleh Microsoft Research dan me
 ## 🌐 **STREAMLIT**
 _framework_ Python yang digunakan untuk dengan cepat membangun dan berbagi aplikasi web yang menarik.
 ### **Web UI**
-
+![Homepage](UAP/assets/Homepage.png)
 ### **Result UI**
+![Hasil Prediksi](UAP/assets/Hasil Prediksi.png)
+
+## 📃 **DEPENDENSI & LANGKAH INSTALASI**
+
+### **Dependensi yang Dibutuhkan**
+- `tensorflow>=2.18.0`
+- `scikit-learn>=1.6.0`
+- `streamlit>=1.41.1`
+- `numpy>=1.23.0`
+- `matplotlib>=3.8.0`
+
+### **Langkah Instalasi TensorFlow Menggunakan PDM**
+1. **Upgrade Pip ke Versi Terbaru**
+    ```bash
+    pip install --upgrade pip
+    ```
+2. **Menginstal Rilis Stabil TensorFlow untuk CPU dan GPU**
+    ```bash
+    pip install tensorflow
+    ```
+3. **Menginstal Versi Pratinjau TensorFlow (Opsional)**
+    ```bash
+    pip install tf-nightly
+    ```
+**Catatan:**
+Sebelum menginstal TensorFlow, pastikan Python sudah terinstal di sistem, dan gunakan lingkungan virtual (virtual environment) untuk mengelola dependensi proyek dengan lebih baik.
+
+### **Struktur File Proyek**
+- `app.py`: File utama yang berisi rute dan fungsi inti.
+- `klasifikasi_citra.py`: File implementasi model untuk melakukan klasifikasi gambar sekaligus mengelola tampilan antarmuka web.
+
+### **Menjalankan Aplikasi**
+- Jalankan aplikasi dengan perintah berikut:
+    ```bash
+    streamlit run ./src/app.py
+    ```
+- Akses aplikasi melalui peramban web di alamat:
+  [Local URL](http://localhost:8501)
+  [Network URL](http://192.168.1.31:8501)
 
 ## **AUTHOR**
 [Valencia Sefiana Putri]
